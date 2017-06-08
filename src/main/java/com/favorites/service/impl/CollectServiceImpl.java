@@ -6,7 +6,8 @@ import javax.transaction.Transactional;
 
 import com.favorites.cache.CacheService;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -35,7 +36,9 @@ import com.favorites.utils.StringUtil;
 
 @Service("collectService")
 public class CollectServiceImpl extends CacheService implements CollectService {
-	protected Logger logger = Logger.getLogger(this.getClass());
+	//protected Logger logger = Logger.getLogger(this.getClass());
+
+	private static Logger logger = LoggerFactory.getLogger(CollectServiceImpl.class);
 
 	@Autowired
 	private CollectRepository collectRepository;

@@ -5,12 +5,13 @@ import com.favorites.comm.config.Config;
 import com.favorites.schedule.ScheduledTasks;
 import com.favorites.utils.URLUtil;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -26,7 +27,7 @@ import java.net.URL;
 @SpringApplicationConfiguration(Application.class)
 public class HtmlUtilTest {
 
-   private static Logger logger = Logger.getLogger(HtmlUtilTest.class);
+   private static Logger logger = LoggerFactory.getLogger(HtmlUtilTest.class);
    @Autowired
    private static Config config;
    @Autowired

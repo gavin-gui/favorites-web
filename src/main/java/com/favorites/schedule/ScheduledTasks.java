@@ -16,7 +16,8 @@ import com.favorites.service.CollectorService;
 import com.favorites.service.RedisService;
 import com.favorites.utils.DateUtils;
 import com.favorites.utils.HtmlUtil;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -28,7 +29,7 @@ import java.util.List;
 @Component
 public class ScheduledTasks {
 	
-	protected Logger logger = Logger.getLogger(this.getClass());
+	protected Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
 	private CollectRepository collectRespository;

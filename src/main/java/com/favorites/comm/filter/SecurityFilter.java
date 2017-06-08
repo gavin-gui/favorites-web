@@ -5,7 +5,8 @@ import com.favorites.domain.User;
 import com.favorites.repository.UserRepository;
 import com.favorites.utils.Des3EncryptionUtil;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.WebApplicationContextUtils;
@@ -19,7 +20,7 @@ import java.util.Set;
 
 public class SecurityFilter implements Filter {
 
-	protected Logger logger = Logger.getLogger(this.getClass());
+	protected Logger logger = LoggerFactory.getLogger(this.getClass());
 	private static Set<String> GreenUrlSet = new HashSet<String>();
 
 	@Autowired
