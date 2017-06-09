@@ -10,3 +10,8 @@
 *.class
 .checkstyle
 /.ide
+.idea/
+gradle/
+gradlew
+gradlew.bat
+logs/
